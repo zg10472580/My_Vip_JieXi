@@ -30,6 +30,37 @@
 	zoom: 1
 }
 
+
+body{
+	background: url(/static/bg.jpg);
+             background-repeat: no-repeat;          
+             background-size: 100% ;100%;          
+             background-attachment: fixed;        
+             }
+label{
+margin:20% auto;
+       color:#ffffff;
+       font-size:50px
+       }
+input[name="radio"]{
+
+margin:10% auto;      width: 50px;
+      height: 50px
+}
+body{
+	display: block;
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    background-size: cover;
+    background-position: 50%;
+    -webkit-filter: blur(35px);
+    -moz-filter: blur(35px);
+    -ms-filter: blur(35px);
+    filter: blur(0px);
+}
 </style>
 <body>
 
@@ -185,8 +216,8 @@ function init(){
         }
     }else {
         if (getQueryVariable("url") == "") {
-            document.getElementsByTagName("h1")[0].innerHTML = '<a href="//' + location.host + '?url="/>你没有输入地址哦!正确用法<br>' + location.host + '?url=任意平台视频地址';
-            document.getElementsByTagName("body")[0].style.backgroundImage = "url({{url_for('static',filename='bg.jpg')}})"
+            document.getElementsByTagName("h1")[0].innerHTML = '<br><h1> <a style="color:#ffff00" href="//' + location.host + '?url="/>你没有输入地址哦!正确用法<br>' + location.host + '?url=任意平台视频地址</h1>';
+           // document.getElementsByTagName("body")[0].style.backgroundImage = "url({{url_for('static',filename='bg.jpg')}})"
         }
     }
 
