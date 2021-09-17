@@ -86,6 +86,7 @@ body{
 <script>
 
 function txs(str){
+    try {
      html = ""
      json = str.PlaylistItem.videoPlayList;
      for (i = 0; i < json.length; i++) {
@@ -93,6 +94,11 @@ function txs(str){
     }
      document.getElementsByClassName("right")[0].innerHTML = html;
     init_click();
+    }catch (Ex){
+          window.open("play" + location.href.replace(location.origin + "/" , "") + "&title=老飞机解析" ,"_blank");
+
+    }
+
 }
 
 function loadScriptString(src) {
